@@ -48,7 +48,7 @@ https://www.odoo.com/es_ES/page/download
 
 Antes de empezar la instalación, algunas de las cosas que se deben cumplir son las siguientes: 
 
-- Que contemos con una segunda máquina con acceso a traves de la red para poder acceder al servidor a traves de navegador
+- Que contemos con una segunda máquina con acceso a traves de la red para poder acceder al servidor a través de navegador
 - Que la dirección IP de la máquina servidor cuente con uns IP fija o un nombre DNS reconocible para poder acceder a ella sin problema. En el caso de hacerlo en un entorno de pruebas podemos dejar el adaptador de red de forma automática con conexión con el host, siempre teniendo en cuenta que nos tendremos que asegurar en todo momento que la dirección IP a la que accedemos es la válida
 
 Una vez creada la máquina virtual los pasos serán los siguienteS: 
@@ -69,7 +69,7 @@ su postgres
 Crear un usuario en la base de datos 
 
 ```shell
-createuser --createdb --username odoodb --no-createrole --no-superuser --pwprompt odoodb
+createuser --createdb --pwprompt odoo
 ```
 
 3. Logeados con el usuario creado en el punto 1, es necesaria la descarga del software. Actualmente está en producción la versión 16 (lanzada en octubre 22). En este caso y al ser una versión tan reciente optaremos por instalar la versión justo anterior
@@ -91,3 +91,90 @@ sudo apt-get install build-essential python3-pillow python3-lxml python3-dev pyt
 pip3 install --upgrade pip
 sudo pip3 install -r /opt/odoo/odoo/requirements.txt
 ```
+
+6. Una vez descargados todos los elementos necesarios, se arranca el servidor odoo para comprobar que todos los elementos funcionan correctamente. Para ello, y situados en la ruta /opt/odoo/odoo/ se ejecuta el binario odoo-bin
+
+```shell
+./odoo-bin
+```
+
+Con la ejecución se mostrará que los servicios están corriendo. Sin embargo salta un aviso que falta por instalar un paquete que es el wkhtmltopdf el cual permite imprimir los informes gestionados dentro de la web. En el caso que además del paquete comentado, el comando indicase que falta algún módulo, será necesario instalarlo meddiante el siguiente comando
+
+```shell
+sudo pip3 install nombre_libreria
+```
+
+8. Antes de la instalación del paquete que falta, es recomendable actualizar los paquetes del sistema. Una vez hecho esto, se procede a la instalación del mismo. Para ello es necesesario agregar algún repositorio extra que tienen dependencias de seguridad que el paquete de pdf utiliza
+
+```shell
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y "deb http://security.ubuntu.com/ubuntu focal-security main"
+sudo apt-get -yq update
+```
+
+Con el repositorio agregado al sistema (y un update - upggrade), se procede a descargar e instalar el servicio de pdf.
+
+```shell
+wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb 
+// tras descarga
+sudo gdebi -n wkhtmltox_0.12.5-1.bionic_amd64.deb 
+```
+
+Por último, para que los binarios estén disponibles para cualquier usuario desde cualquier perfil, se realiza un enlace de los binarios
+
+```shell
+sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin/ 
+sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin/
+```
+
+Con estas instalaciones odoo ya está preparado para trabajar. Antes de arrancarlo y configurar el servicio de arranque automático, se crean una carpeta dentro de /var/log/ llamada odoo donde se guardarán los registros del sistema. Es importante que esta carpeta tenga los permisos bien configurados para que el usuario owner sea el usuario odoo
+
+```shell
+mkdir /var/log/odoo/
+chown odoo:root /var/log/odoo
+```
+
+9. El siguiente paso es realizar una copia del fichero de configuración para que el sistema sepa cuales son los elementos de los que consta el servicio.Para ello se realiza una copia del fichero odoo.conf en la ruta del los archivos de configuración. Además es necesario darle la propiedad al usuario odoo y poner una máscara de 640
+
+```shell
+cp /opt/odoo/odoo/debian/odoo.conf  /etc/odoo.conf
+chown odoo: /etc/odoo.conf
+chmod 640 /etc/odoo.conf
+```
+
+10. Con el fichero de configuración creado, será necesario verificar su contenido, abriendolo con el editor de texto que queramos
+
+```shell
+db_user = odoo
+db_password = odoo
+addons_path = /opt/odoo/odoo/addons
+logfile = /var/log/odoo/odoo-server.log
+```
+
+11. Por último queda la configuración del servicio para que este se arranque automáticamente cuando se inicia el servicio. Para ello es necesario copiar el servicio de la carpeta clonada y dejarlo en la ruta de los servicios de ubuntu
+
+```shell
+sudo cp /opt/odoo/odoo/debian/odoo.service /etc/systemd/system/odoo.service
+```
+
+Una vez copiado es necesario modificar algunos elementos del servicio. Para ello abrimos el fichero copiado con editor de texto
+
+```shell
+[Service]
+Type= simple
+User=odoo
+Group= odoo
+ExecStart=/opt/odoo/odoo/odoo-bin --config /etc/odoo.conf 
+```
+
+Es muy importante que el el atributo de ExecStart se ponga la ruta del binario de odoo y en el de config la ruta del fichero de configuración que se ha copiado en pasos anteriores
+
+12. Con todo esto hecho el servicio ya está completo y lo único que haría falta es activarlo mediante systemctl.
+
+```shell
+sudo systemctl enable odoo.service
+```
+
+Con el servicio activado y mediante systemctl podemos parar, arrancar, reiniciar y consultar el status del servicio.
+
+13. Para acceder a odoo, desde un navegador dentro de la red del servidor ponemos la dirección https://IP_SERVIDOR:8069
