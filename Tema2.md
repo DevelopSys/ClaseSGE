@@ -58,7 +58,7 @@ Una vez creada la máquina virtual los pasos serán los siguienteS:
 2. Instalación de los servicios de postgre
 
 ```shell
-sudo apt-get install postgresql postgresql-server-dev-14 postfregre
+sudo apt-get install postgresql postgresql-server-dev-14
 ```
 Logearse con el usuario creado por el servicio
 
