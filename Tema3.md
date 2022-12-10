@@ -1,180 +1,121 @@
-# ERPs libres
+# Configuración inicial de Odoo
 
-El mercado de los ERPs se puede diferenciar entre los ERPs libres (aquellos que cuya licencia no es propietaria y no requiere de un pago) y los propietarios de pago. Nosotros nos vamos a centrar en los ERP libres, y en concreto en Odoo. Antes de empezar a ver cuales son las características de este ERP es importante recalcar las principales características de un software libre
--  Es gratuito, por lo que los constes de implantación se reducen bastante
--  No requiere de pago por mantenimiento, por lo que el trabajo lo realiza o bien el administrador/es de la empresa o una empresa que sea contratada.
--  Cuenta con una comunidad por detrás que dá mucho "soporte" gratuito, ya que hay gran cantidad de documentación que puede servir
--  Al ser libre y tener un código abierto, los desarrolladores pueden crear sus extensiones y publicarlas para que estas sean utilizadas por el resto de la gente
+Una vez instalado odoo, podemos comprobar que todo ha ido bien si con el servicio arrancado desde la máquina que actúa como servidor, intentamos acceder desde un navegador de la red a la dirección IP_SERVIDOR:8069. Además de esta comprobación podremos hacer la comprobacion del servicio que soporta odoo
 
-
-## Proceso de instalación
-
-Como todo proyecto software, implantar un ERP no es un proceso sencillo y requiere de una serie de pasos que son necesarios. No se trata de instalar y configurar un ERP, sino que es necesario ver las necesidades, disponibilidades, infraestructuras, situación actual de la empresa donde se quiera implantar, etc... ya que de no hacer todos estos pasos se puede llegar al no existo de la implantación. Como veremos ahora, dentro de estos pasos no solo tenemos que tener en cuenta elementos, que por supuesto al tratarse de la implantación de un software, sino que también tendremos quq tener en cuenta elementos psicológicos y sociales ya que se está implantando un software para que lo utilicen las personas, y si estas no aceptan el cambio, por mucho que el software sea bueno el proceso se viene abajo. Por ello antes de implantar el sistema es necesario realizar los siguientes pasos: 
-
-1. Análisis de necesidades y requisitos: No es lo mismo implantar un ERP para una empresa pequeña con 10 empleados que para una empresa que tiene 100 empleados. Antes de seleccionar el erp y el tipo de instalación es obligatorio hacer un análisis de mercado con los que existen, sus características y una vez evaluados todos, decidir cual es el que mejor se acopla a las necesidades de la empresa
-2. Diseño de la instalación: Cuando se ha decidido el sistema que se va a instalar, es necesario diseñar cuales son los datos que se van a incluir, como se van a mapear, que informes se querrán incluir dentro del sistema, etc...
-3. Instalación de equipos: Dependiendo de cual sea el ERP seleccionado y el tipo de instalación seleccionada, será necesaria una actualización de HW para que pueda soportar la carga del sistema que se va a implementar. Más adelante veremos los diferentes tipos de instalaciones, pudiendo encontrarnos en algunos casos que no necesitamos una instalación local como tal ya que se accede remotamente a través de la nube, por lo que en este caso no necesitaríamos una actualización de equipos
-4. Adaptar y configurar el programa: Cada empresa es un mundo, por lo que una vez instalado el software será necesita una configuración inicial para que este pueda cubrir todos los requisitos necesarios para la empresa para la que se está desplegando
-5. Migración de datos: Uno de los puntos críticos del proceso, ya que si con algo hace un erp es la administración de la empresa y esto solo se puede hacer con datos. En el caso de que estemos migrando de un sistema analógico a un sistema digital, este paso puede ser bastante tedioso ya que será necesario recopilar datos de muy diferentes fuentes. En el caso de estar haciendo una migración de sistema este proceso será algo más liviano ya que todos los sistemas por regla general trabajan con estándares
-6. Pruebas: Una vez se han completados todos los pasos anteriores, antes de poner el sistema en producción es necesario realizar pruebas de funcionamiento para poder asegurar la calidad del producto. Las pruebas pueden ser de muy diferentes tipos: funcionalidad, rendimiento, integración, seguridad, etc...
-7. Documentación: En realidad este es un paso transversal, es decir que pertenece a todo el proceso de implantación. La documentación es la generación de informes, manuales, ayudas, etc... que ayuda tanto al usuario final como al usuario administrador del sistema a comprender como funciona el sistema y en el caso de necesitar una administración profunda como poder hacerlo. La documentación es uno de los pasos básicos en el desarrollo software, ya que por ejemplo sin ella estaríamos muy perdidos ante un sistema que no hemos hecho nosotros
-8. Formación: Último paso antes de la puesta en producción. Al principio se ha comentado que en el proceso de implantación no solo se van a tratar aspectos tecnológicos, sino que también se tratan aspectos psicológicos. En este caso es muy importante dar una buena formación a las personas que van a utilizar el sistema ya que si un usuario no sabe utilizar un sistema al fin y al cabo es como no tener nada, y más aún es posible que muchas de las funcionalidades las haga más y esto redunde en los datos de la empresa. Normalmente en los ERP se suelen diferenciar dos tipos de formaciones: una para los responsables del proyecto donde se les forma en como configurar el sistema, parametrizar, extractar datos, configurar informes nativos, etc... y otra formación para los usuarios finales donde se les indica como realizar su trabajo diario, más centrado en la parte del fronend
-
-## Tipo de instalación
-
-A grandes rasgos nos podemos encontrar con los siguientes tipos de instalación 
-
-1. Mediante máquina: instalación basada en un servidor desde el cual se presta servicio a todos los clientes que solicitan acceso al servicio a traves de TCP/IP. Se trata de la arquitectura cliente-servidor por excelencia. En el caso de querer hacer un servicio de prueba para poder evaluar el software, se puede hacer esta infraestructura en una máquina virtual para no tener que desempeñar una máquina local completa para este cometido
-2. Instalación mediante entrono gráfico: mediante un asistente de instalación se instala el software de la manera tradicional. Mediante esta opción se pueden configurar los programas y/o módulos que queremos que tenga instalado el sistema desde un inicio
-3. Acceso al servicio desde la nube: en este caso no necesitaremos de ningún hardware adicional sino que lo haremos todo con acceso a servicios que una tercera empres nos brindará. Estos servicios pueden ser de tres grandes formas
-   1. IaaS: infraestructura como servicio. En este caso el servicio web que se nos ofrece es un servicio de hardware a cambio de una cuota que representaría un alquiler. Los ejemplos más claros de este tipo de servicios son AWS y Azure
-   2. PasS: plataforma como servicio. A diferencia del caso anterior, con este tipo de servicios la empresa que se contrata da acceso a una plataforma sobre la cual se puede crear aplicaciones o elementos directamente en la nube. Es totalmente diferente a la anterior, ya que antes simplemente nos daban acceso a la máquina. El ejemplo más claro de este tipo de servicios es google app engine
-   3. SaaS. software como servicio. Este es el caso de los ERP online. Aquí, las empresas nos dan la posibilidad de acceder a un software para poder ejecutar sus funcionalidades sin necesidad de tener nada instalado en local. 
-
-# Odoo
-
-Odoo en la actualidad cuenta con dos versiones: 
-
-- Community: Se trata de la versión limitada, ya que no cuenta con todas las características como por ejemplo soporte, actualizaciones, SaaS, así como la personalización de alguno de los módulos que se pueden instalar
-- Enterprise: Aquella que cuenta con todas las características del software. Tiene un coste adicional y es facturado por usuarios / mes. Vá desde los 12 € hasta los 18€ en el caso de querer una instalación personalizada con conexiónAPI
-
-Las características completas de cada una de las versiones las podemos encontrar aquí: https://www.odoo.com/es_ES/page/editions
-
-## Instalación
-
-Para poder realizar la instalación se va a realizar mediante máquina virtual sobre un sistema ubuntu server. En el caso de querer hacer la instalacion mediante paquete gráfico tendremos que descargarlos desde el siguiente link
-
-https://www.odoo.com/es_ES/page/download
-
-Antes de empezar la instalación, algunas de las cosas que se deben cumplir son las siguientes: 
-
-- Que contemos con una segunda máquina con acceso a traves de la red para poder acceder al servidor a través de navegador
-- Que la dirección IP de la máquina servidor cuente con uns IP fija o un nombre DNS reconocible para poder acceder a ella sin problema. En el caso de hacerlo en un entorno de pruebas podemos dejar el adaptador de red de forma automática con conexión con el host, siempre teniendo en cuenta que nos tendremos que asegurar en todo momento que la dirección IP a la que accedemos es la válida
-
-Una vez creada la máquina virtual los pasos serán los siguienteS: 
-
-1. Crear un usuario de sistema llamado odoo con el home localizado en /opt/odoo y las shell /bin/bash
-
-2. Instalación de los servicios de postgre
-
-```shell
-sudo apt-get install postgresql postgresql-server-dev-14
-```
-Logearse con el usuario creado por el servicio
-
-```shell
-su postgres
+```bash
+systemctl status odoo.service
 ```
 
-Crear un usuario en la base de datos 
+Otra cosa importante antes de continuar es el tema de los archivos de configuración. Tenemos que tener muy claro los siguientes:
 
-```shell
-createuser --createdb --pwprompt odoo
+- /etc/odoo.conf: archivo de configuración donde se ubican los parámetros de la configuración, como por ejemplo base de datos de la que se tira, usuario y contraseña con permisos, etc..
+- /etc/systemd/system/odoo.service: archivo que contiene la configuración del servicio que soporta la ejecución del ERP
+
+Una vez entendido esto podemos empezar con la configuración básica. Desde el navegador, introduciremos el nombre del usuario, contraseña, base de datos, idioma y demás información que se nos pode. Con esto la base de datos quedará creada. Es posible llenarla con datos de prueba si así se le indica. Una cosa muy importante es la contraseña del database master que se indica, ya que será la necesaria para poder gestionar las bases de datos si se desea.
+
+Una vez creada la base de datos podremos acceder al sistema bien con el usuario que acabamos de crear (el correo indicado) o bien con el usuario administrador que viene por defecto (admin / admin) en el caso de haber seleccionado datos de prueba. 
+
+Antes de entrar y configurar el ERP vamos a comentar un par de consideraciones
+
+## Seleccionar la base de datos con la que se quiere trabajar
+
+Con el asistente seguido en el punto anterior, se ha creado una base de datos dentro del servidor (que ahora comentaremos). Pero en algunos casos es posible querer tener dos bases de datos para por ejemplo hacer entornos de prueba. En este caso será necesario crearla desde la opción de gestión de bases de datos. Desde aquí se podrá:
+
+- crear una nueva base de datos (iniciando el asistente primero)
+- realizar un backup de una base de datos
+- borrar una base de datos
+
+En el momento que tengamos más de una base de datos, en el momento de iniciar sesión podremos seleccionar cual de ellas queremos utilizar. 
+
+Este proceso se puede hacer manual (como acabamos de ver) o se puede hacer por comandos. Para ello lo primero que debemos hacer es crear la base de datos (ojo que hay que estar logeado con el usuario con permisos postgresql que se creó en el tema anterior) ejecutando el comando
+
+```bash
+createdb nombreNuevo
 ```
 
-3. Logeados con el usuario creado en el punto 1, es necesaria la descarga del software. Actualmente está en producción la versión 16 (lanzada en octubre 22). En este caso y al ser una versión tan reciente optaremos por instalar la versión justo anterior
+Una vez hecho esto es necesario inicializarla con todas las tablas necesarias, para lo cual se ejecuta el siguiente comando
 
-```shell
-cd /opt/odoo
-git clone https://www.github.com/odoo/odoo --depth 1 --branch 15.0 --single-branch
+```bash
+/opt/odoo/odoo/odoo-bin -d nombreNuevo
 ```
 
-4. Instalación de las librerías necesarias
+Este comando inicializa el esquema de la base de datos y además asígna la base de datos como base de datos por defecto de odoo. 
 
-```shell
-sudo apt-get install build-essential python3-pillow python3-lxml python3-dev python3-pip python3-setuptools libpq-dev npm nodejs git gdebi libldap2-dev libsasl2-dev libxml2-dev libxslt1-dev libjpeg-dev apache2 -y
+Para poder comprobar que el proceso ha funcionado (tanto si se ha hecho de forma manual o si se ha hecho mediante comandos) podemos conectarnos a la consola de postgres y evaluar. Para ello seguiremos los siguientes pasos:
+
+1. Dar permisos de acceso a IPs diferentes a la 127.0.0.1 (esto no es obligatorio). Para poder hacer esto editaremos el fichero main ubicado en la siguiente ruta: /etc/postgresql/14/main . Cuidado que el 14 puede diferir dependiendo de la version de postgresql que tengamos instalada. En parte donde indica que direcciones se deben escuchas, modificaremos el 127.0.0.1 por *
+
+```bash
+listen_addresses = '*'
+```
+2. Modificaremos el archivo de peticiones entrantes ubicado en /etc/postgresql/14/pg_hba.conf para que admita peticiones entrantes desde cualquier IP. Para ello en la parte de IPv4 podremos lo siguiente:
+
+psql -h 192.168.4.6 -d odoo -U odoo -W
+
+```bash
+host    all             all             0.0.0.0/0
 ```
 
-5. Instalación de dependencias pip3 (sistema de gestor de paquetes de python)
+3. Por último será necesario resetear el servico para que se apliquen todos los cambios realizados
 
-```shell
-pip3 install --upgrade pip
-sudo pip3 install -r /opt/odoo/odoo/requirements.txt
+```bash
+sudo service postgresql restart
 ```
 
-6. Una vez descargados todos los elementos necesarios, se arranca el servidor odoo para comprobar que todos los elementos funcionan correctamente. Para ello, y situados en la ruta /opt/odoo/odoo/ se ejecuta el binario odoo-bin
+Con todos estos pasos hechos, podremos conectarnos a la consla de postresql mediante el siguiente comando
 
-```shell
-./odoo-bin
+```bash
+psql -h 192.168.4.6 -d odoo -U odoo -W
 ```
 
-Con la ejecución se mostrará que los servicios están corriendo. Sin embargo salta un aviso que falta por instalar un paquete que es el wkhtmltopdf el cual permite imprimir los informes gestionados dentro de la web. En el caso que además del paquete comentado, el comando indicase que falta algún módulo, será necesario instalarlo meddiante el siguiente comando
+Donde -d es la base de datos a la que nos queremos conectar
+Donde -U es el usuario con el que nos conectamos
 
-```shell
-sudo pip3 install nombre_libreria
+En el caso de no quererse conectar a ninguna base de datos simplemente tendremos que poner el comando 
+
+```bash
+psql -h 192.168.4.6
+```
+Una vez en la consola pueden ser útiles los siguientes comandos:
+- \q para salir de la conexión
+- \l lista todas las bases de datos
+- \connect nombreBD conecta con la base de datos seleccionada
+- \dt una vez conectado a una base de datos muestra todas las tablas de dicha base de datos. Una vez dentro, se pueden hacer consultas sobre las tablas. Por ejemplo para poder ver todos los usuarios del sistema actual podemos ejecutar la query
+
+```sql
+SELECT * FROM res_users;
 ```
 
-8. Antes de la instalación del paquete que falta, es recomendable actualizar los paquetes del sistema. Una vez hecho esto, se procede a la instalación del mismo. Para ello es necesesario agregar algún repositorio extra que tienen dependencias de seguridad que el paquete de pdf utiliza
+## Acceso al servidor de forma remota. 
 
-```shell
-sudo apt-get install -y software-properties-common
-sudo apt-add-repository -y "deb http://security.ubuntu.com/ubuntu focal-security main"
-sudo apt-get -yq update
+Para poder acceder de forma remota al servidor se puede hacer de dos formas
+
+- Gráficamente: Lo podremos hacer desde cualquier cliente ligero, simplemente indicando los parámetros de configuracion del servidor. Clientes como UltraVNC, RealVNC o Chicken of the VNC son suficientes
+- Por consola: Para poder acceder por consola el método más aceptado es ssh. En el caso de conectar desde un linux o un mac lo podremos hacer directamente desde consola instalando los paquetes necesarios. En el caso de hacerlo desde un windows tendremos que descargar un cliente como por ejemplo putty
+
+Para poder utilizar shh en linux es necesario instalar el paquete openssh-server en la máquina destino, en nuestro caso el servidor de odoo donde están instaladas las cosas.
+
+```bash
+apt get install openssh-server
 ```
 
-Con el repositorio agregado al sistema (y un update - upggrade), se procede a descargar e instalar el servicio de pdf.
+Una vez hecho esto y con el servicio activo, bastaría con ir a cualquier cliente y acceder con el siguiente comando:
 
-```shell
-wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb 
-// tras descarga
-sudo gdebi -n wkhtmltox_0.12.5-1.bionic_amd64.deb 
+```bash
+ssh usuario@direccion_ip
 ```
 
-Por último, para que los binarios estén disponibles para cualquier usuario desde cualquier perfil, se realiza un enlace de los binarios
+La primera vez que conecta pide la verificación de confianza (fingerprint) de forma que la siguiente vez que conecta no sería necesaria está verificación
 
-```shell
-sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin/ 
-sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin/
+
+# Primeros pasos
+
+Todo ERP basa su funcionalidad en los módulos, que no es más que un conjunto software que realiza una funcionalidad concreta con los datos que tiene el ERP. Principalmente existen dos tipos de módulos
+- Adicionales: aquellos que se pueden instalar tras la puesta en marcha del sistema
+- Bases: aquellos que vienen instalados de base y sin los cuales no funcionaría el sistema. Entre estos podemos diferenciar dos: empresas y administración (el cual permite añadir nuevos módulos adicionales)
+
+Para poder instalar módulos, es tan sencillo como seleccionar el módulo que queremos instalar y seleccionarlo. Una vez hecho esto, podremos comprobar que el módulo aparece dentro de las opciones del sistema. En el caso de querer ver donde se ubica en el servidor, tendríamos que ir a la ruta donde se guardan todos los elementos del sistema
+
+```bash
+cat /opt/odoo/odoo/addons
 ```
-
-Con estas instalaciones odoo ya está preparado para trabajar. Antes de arrancarlo y configurar el servicio de arranque automático, se crean una carpeta dentro de /var/log/ llamada odoo donde se guardarán los registros del sistema. Es importante que esta carpeta tenga los permisos bien configurados para que el usuario owner sea el usuario odoo
-
-```shell
-mkdir /var/log/odoo/
-chown odoo:root /var/log/odoo
-```
-
-9. El siguiente paso es realizar una copia del fichero de configuración para que el sistema sepa cuales son los elementos de los que consta el servicio.Para ello se realiza una copia del fichero odoo.conf en la ruta del los archivos de configuración. Además es necesario darle la propiedad al usuario odoo y poner una máscara de 640
-
-```shell
-cp /opt/odoo/odoo/debian/odoo.conf  /etc/odoo.conf
-chown odoo: /etc/odoo.conf
-chmod 640 /etc/odoo.conf
-```
-
-10. Con el fichero de configuración creado, será necesario verificar su contenido, abriendolo con el editor de texto que queramos
-
-```shell
-db_user = odoo
-db_password = odoo
-addons_path = /opt/odoo/odoo/addons
-logfile = /var/log/odoo/odoo-server.log
-```
-
-11. Por último queda la configuración del servicio para que este se arranque automáticamente cuando se inicia el servicio. Para ello es necesario copiar el servicio de la carpeta clonada y dejarlo en la ruta de los servicios de ubuntu
-
-```shell
-sudo cp /opt/odoo/odoo/debian/odoo.service /etc/systemd/system/odoo.service
-```
-
-Una vez copiado es necesario modificar algunos elementos del servicio. Para ello abrimos el fichero copiado con editor de texto
-
-```shell
-[Service]
-Type= simple
-User=odoo
-Group= odoo
-ExecStart=/opt/odoo/odoo/odoo-bin --config /etc/odoo.conf 
-```
-
-Es muy importante que el el atributo de ExecStart se ponga la ruta del binario de odoo y en el de config la ruta del fichero de configuración que se ha copiado en pasos anteriores
-
-12. Con todo esto hecho el servicio ya está completo y lo único que haría falta es activarlo mediante systemctl.
-
-```shell
-sudo systemctl enable odoo.service
-```
-
-Con el servicio activado y mediante systemctl podemos parar, arrancar, reiniciar y consultar el status del servicio.
-
-13. Para acceder a odoo, desde un navegador dentro de la red del servidor ponemos la dirección https://IP_SERVIDOR:8069
