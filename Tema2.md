@@ -142,7 +142,7 @@ chown odoo: /etc/odoo.conf
 chmod 640 /etc/odoo.conf
 ```
 
-10. Con el fichero de configuración creado, será necesario verificar su contenido, abriendolo con el editor de texto que queramos
+10. Con el fichero de configuración creado, será necesario verificar su contenido, abriéndolo con el editor de texto que queramos
 
 ```shell
 db_user = odoo
