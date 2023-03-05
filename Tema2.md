@@ -1,15 +1,15 @@
 # ERPs libres
 
 El mercado de los ERPs se puede diferenciar entre los ERPs libres (aquellos que cuya licencia no es propietaria y no requiere de un pago) y los propietarios de pago. Nosotros nos vamos a centrar en los ERP libres, y en concreto en Odoo. Antes de empezar a ver cuales son las características de este ERP es importante recalcar las principales características de un software libre
--  Es gratuito, por lo que los constes de implantación se reducen bastante
--  No requiere de pago por mantenimiento, por lo que el trabajo lo realiza o bien el administrador/es de la empresa o una empresa que sea contratada.
--  Cuenta con una comunidad por detrás que dá mucho "soporte" gratuito, ya que hay gran cantidad de documentación que puede servir
--  Al ser libre y tener un código abierto, los desarrolladores pueden crear sus extensiones y publicarlas para que estas sean utilizadas por el resto de la gente
 
+- Es gratuito, por lo que los constes de implantación se reducen bastante
+- No requiere de pago por mantenimiento, por lo que el trabajo lo realiza o bien el administrador/es de la empresa o una empresa que sea contratada.
+- Cuenta con una comunidad por detrás que dá mucho "soporte" gratuito, ya que hay gran cantidad de documentación que puede servir
+- Al ser libre y tener un código abierto, los desarrolladores pueden crear sus extensiones y publicarlas para que estas sean utilizadas por el resto de la gente
 
 ## Proceso de instalación
 
-Como todo proyecto software, implantar un ERP no es un proceso sencillo y requiere de una serie de pasos que son necesarios. No se trata de instalar y configurar un ERP, sino que es necesario ver las necesidades, disponibilidades, infraestructuras, situación actual de la empresa donde se quiera implantar, etc... ya que de no hacer todos estos pasos se puede llegar al no existo de la implantación. Como veremos ahora, dentro de estos pasos no solo tenemos que tener en cuenta elementos, que por supuesto al tratarse de la implantación de un software, sino que también tendremos quq tener en cuenta elementos psicológicos y sociales ya que se está implantando un software para que lo utilicen las personas, y si estas no aceptan el cambio, por mucho que el software sea bueno el proceso se viene abajo. Por ello antes de implantar el sistema es necesario realizar los siguientes pasos: 
+Como todo proyecto software, implantar un ERP no es un proceso sencillo y requiere de una serie de pasos que son necesarios. No se trata de instalar y configurar un ERP, sino que es necesario ver las necesidades, disponibilidades, infraestructuras, situación actual de la empresa donde se quiera implantar, etc... ya que de no hacer todos estos pasos se puede llegar al no existo de la implantación. Como veremos ahora, dentro de estos pasos no solo tenemos que tener en cuenta elementos, que por supuesto al tratarse de la implantación de un software, sino que también tendremos quq tener en cuenta elementos psicológicos y sociales ya que se está implantando un software para que lo utilicen las personas, y si estas no aceptan el cambio, por mucho que el software sea bueno el proceso se viene abajo. Por ello antes de implantar el sistema es necesario realizar los siguientes pasos:
 
 1. Análisis de necesidades y requisitos: No es lo mismo implantar un ERP para una empresa pequeña con 10 empleados que para una empresa que tiene 100 empleados. Antes de seleccionar el erp y el tipo de instalación es obligatorio hacer un análisis de mercado con los que existen, sus características y una vez evaluados todos, decidir cual es el que mejor se acopla a las necesidades de la empresa
 2. Diseño de la instalación: Cuando se ha decidido el sistema que se va a instalar, es necesario diseñar cuales son los datos que se van a incluir, como se van a mapear, que informes se querrán incluir dentro del sistema, etc...
@@ -22,18 +22,18 @@ Como todo proyecto software, implantar un ERP no es un proceso sencillo y requie
 
 ## Tipo de instalación
 
-A grandes rasgos nos podemos encontrar con los siguientes tipos de instalación 
+A grandes rasgos nos podemos encontrar con los siguientes tipos de instalación
 
 1. Mediante máquina: instalación basada en un servidor desde el cual se presta servicio a todos los clientes que solicitan acceso al servicio a traves de TCP/IP. Se trata de la arquitectura cliente-servidor por excelencia. En el caso de querer hacer un servicio de prueba para poder evaluar el software, se puede hacer esta infraestructura en una máquina virtual para no tener que desempeñar una máquina local completa para este cometido
 2. Instalación mediante entrono gráfico: mediante un asistente de instalación se instala el software de la manera tradicional. Mediante esta opción se pueden configurar los programas y/o módulos que queremos que tenga instalado el sistema desde un inicio
 3. Acceso al servicio desde la nube: en este caso no necesitaremos de ningún hardware adicional sino que lo haremos todo con acceso a servicios que una tercera empres nos brindará. Estos servicios pueden ser de tres grandes formas
    1. IaaS: infraestructura como servicio. En este caso el servicio web que se nos ofrece es un servicio de hardware a cambio de una cuota que representaría un alquiler. Los ejemplos más claros de este tipo de servicios son AWS y Azure
    2. PasS: plataforma como servicio. A diferencia del caso anterior, con este tipo de servicios la empresa que se contrata da acceso a una plataforma sobre la cual se puede crear aplicaciones o elementos directamente en la nube. Es totalmente diferente a la anterior, ya que antes simplemente nos daban acceso a la máquina. El ejemplo más claro de este tipo de servicios es google app engine
-   3. SaaS. software como servicio. Este es el caso de los ERP online. Aquí, las empresas nos dan la posibilidad de acceder a un software para poder ejecutar sus funcionalidades sin necesidad de tener nada instalado en local. 
+   3. SaaS. software como servicio. Este es el caso de los ERP online. Aquí, las empresas nos dan la posibilidad de acceder a un software para poder ejecutar sus funcionalidades sin necesidad de tener nada instalado en local.
 
 # Odoo
 
-Odoo en la actualidad cuenta con dos versiones: 
+Odoo en la actualidad cuenta con dos versiones:
 
 - Community: Se trata de la versión limitada, ya que no cuenta con todas las características como por ejemplo soporte, actualizaciones, SaaS, así como la personalización de alguno de los módulos que se pueden instalar
 - Enterprise: Aquella que cuenta con todas las características del software. Tiene un coste adicional y es facturado por usuarios / mes. Vá desde los 12 € hasta los 18€ en el caso de querer una instalación personalizada con conexiónAPI
@@ -46,12 +46,12 @@ Para poder realizar la instalación se va a realizar mediante máquina virtual s
 
 https://www.odoo.com/es_ES/page/download
 
-Antes de empezar la instalación, algunas de las cosas que se deben cumplir son las siguientes: 
+Antes de empezar la instalación, algunas de las cosas que se deben cumplir son las siguientes:
 
 - Que contemos con una segunda máquina con acceso a traves de la red para poder acceder al servidor a través de navegador
 - Que la dirección IP de la máquina servidor cuente con uns IP fija o un nombre DNS reconocible para poder acceder a ella sin problema. En el caso de hacerlo en un entorno de pruebas podemos dejar el adaptador de red de forma automática con conexión con el host, siempre teniendo en cuenta que nos tendremos que asegurar en todo momento que la dirección IP a la que accedemos es la válida
 
-Una vez creada la máquina virtual los pasos serán los siguienteS: 
+Una vez creada la máquina virtual los pasos serán los siguienteS:
 
 1. Crear un usuario de sistema llamado odoo con el home localizado en /opt/odoo y las shell /bin/bash
 
@@ -60,13 +60,14 @@ Una vez creada la máquina virtual los pasos serán los siguienteS:
 ```shell
 sudo apt-get install postgresql postgresql-server-dev-14
 ```
+
 Logearse con el usuario creado por el servicio
 
 ```shell
 su postgres
 ```
 
-Crear un usuario en la base de datos 
+Crear un usuario en la base de datos
 
 ```shell
 createuser --createdb --pwprompt odoo
@@ -115,15 +116,15 @@ sudo apt-get -yq update
 Con el repositorio agregado al sistema (y un update - upggrade), se procede a descargar e instalar el servicio de pdf.
 
 ```shell
-wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb 
+wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
 // tras descarga
-sudo gdebi -n wkhtmltox_0.12.5-1.bionic_amd64.deb 
+sudo gdede  bi -n wkhtmltox_0.12.5-1.bionic_amd64.deb
 ```
 
 Por último, para que los binarios estén disponibles para cualquier usuario desde cualquier perfil, se realiza un enlace de los binarios
 
 ```shell
-sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin/ 
+sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin/
 sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin/
 ```
 
@@ -139,7 +140,7 @@ chown odoo:root /var/log/odoo
 ```shell
 cp /opt/odoo/odoo/debian/odoo.conf  /etc/odoo.conf
 chown odoo: /etc/odoo.conf
-chmod 640 /etc/odoo.conf
+chmod 640 /etc/odoo.conpip3
 ```
 
 10. Con el fichero de configuración creado, será necesario verificar su contenido, abriéndolo con el editor de texto que queramos
@@ -164,7 +165,7 @@ Una vez copiado es necesario modificar algunos elementos del servicio. Para ello
 Type= simple
 User=odoo
 Group= odoo
-ExecStart=/opt/odoo/odoo/odoo-bin --config /etc/odoo.conf 
+ExecStart=/opt/odoo/odoo/odoo-bin --config /etc/odoo.conf
 ```
 
 Es muy importante que el el atributo de ExecStart se ponga la ruta del binario de odoo y en el de config la ruta del fichero de configuración que se ha copiado en pasos anteriores

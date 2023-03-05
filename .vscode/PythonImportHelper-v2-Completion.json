@@ -1,0 +1,389 @@
+[
+    {
+        "label": "modfunciones",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "modfunciones",
+        "description": "modfunciones",
+        "detail": "modfunciones",
+        "documentation": {}
+    },
+    {
+        "label": "numero",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "numero = 8\nnumeroDecimal = 4.23\nnumeroComplejo = 4.21j\nnombre = \"borja\"\nacierto = False\nname, lastName, adress = 'Borja', 'Martin', 'Madrid'\nprint(name)\nprint(type(numeroDecimal))\nprint(type(numeroComplejo))\nprint(type(nombre))",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "numeroDecimal",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "numeroDecimal = 4.23\nnumeroComplejo = 4.21j\nnombre = \"borja\"\nacierto = False\nname, lastName, adress = 'Borja', 'Martin', 'Madrid'\nprint(name)\nprint(type(numeroDecimal))\nprint(type(numeroComplejo))\nprint(type(nombre))\nprint(type(acierto))",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "numeroComplejo",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "numeroComplejo = 4.21j\nnombre = \"borja\"\nacierto = False\nname, lastName, adress = 'Borja', 'Martin', 'Madrid'\nprint(name)\nprint(type(numeroDecimal))\nprint(type(numeroComplejo))\nprint(type(nombre))\nprint(type(acierto))\nprint(\"Imprimir por consola algo\")",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "nombre",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "nombre = \"borja\"\nacierto = False\nname, lastName, adress = 'Borja', 'Martin', 'Madrid'\nprint(name)\nprint(type(numeroDecimal))\nprint(type(numeroComplejo))\nprint(type(nombre))\nprint(type(acierto))\nprint(\"Imprimir por consola algo\")\nprint(type(10))",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "acierto",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "acierto = False\nname, lastName, adress = 'Borja', 'Martin', 'Madrid'\nprint(name)\nprint(type(numeroDecimal))\nprint(type(numeroComplejo))\nprint(type(nombre))\nprint(type(acierto))\nprint(\"Imprimir por consola algo\")\nprint(type(10))\narrayDatos = [\"Array de datos\", \"Para poder evualuar\", \"Varias posiciones\"]",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "arrayDatos",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "arrayDatos = [\"Array de datos\", \"Para poder evualuar\", \"Varias posiciones\"]\nelemento = {\n    'nombre': 'Borja',\n    'apellido': 'Martín',\n    'clases': ['PMDM', 'AD', 'SGE']\n}\nprint(elemento.nombre)",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "elemento",
+        "kind": 5,
+        "importPath": "Tema4.01_inicio",
+        "description": "Tema4.01_inicio",
+        "peekOfCode": "elemento = {\n    'nombre': 'Borja',\n    'apellido': 'Martín',\n    'clases': ['PMDM', 'AD', 'SGE']\n}\nprint(elemento.nombre)",
+        "detail": "Tema4.01_inicio",
+        "documentation": {}
+    },
+    {
+        "label": "letra",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "letra = 'a'\npalabra = 'introduccion a python'\npalabraMultiple = \"\"\" Esto es la escritura de una variable\ndonde están escritas varias lineas, pero asignadas a la misma variable\n\"\"\"\nprint(letra)\nprint(palabra)\nprint(palabraMultiple)\nnombre = 'Borja'\napellido = 'Martin'",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "palabra",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "palabra = 'introduccion a python'\npalabraMultiple = \"\"\" Esto es la escritura de una variable\ndonde están escritas varias lineas, pero asignadas a la misma variable\n\"\"\"\nprint(letra)\nprint(palabra)\nprint(palabraMultiple)\nnombre = 'Borja'\napellido = 'Martin'\nasignatura = 'SGE'",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "palabraMultiple",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "palabraMultiple = \"\"\" Esto es la escritura de una variable\ndonde están escritas varias lineas, pero asignadas a la misma variable\n\"\"\"\nprint(letra)\nprint(palabra)\nprint(palabraMultiple)\nnombre = 'Borja'\napellido = 'Martin'\nasignatura = 'SGE'\nanio = 2023",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "nombre",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "nombre = 'Borja'\napellido = 'Martin'\nasignatura = 'SGE'\nanio = 2023\nprint('Este repositorio ha sido realizado por {} {} para la asignautara de {} en el año {}'.format(\n    nombre, apellido, asignatura, anio))\n\"\"\" print('Este repositorio ha sido realizado por %s %s para la asignautar de %s en el año %d' %\n      (nombre, apellido, asignatura, anio)) \"\"\"\nprint(\n    f'Este repositorio ha sido realizado por {nombre} {apellido} para la asignatura de {asignatura} en el año {anio}')",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "apellido",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "apellido = 'Martin'\nasignatura = 'SGE'\nanio = 2023\nprint('Este repositorio ha sido realizado por {} {} para la asignautara de {} en el año {}'.format(\n    nombre, apellido, asignatura, anio))\n\"\"\" print('Este repositorio ha sido realizado por %s %s para la asignautar de %s en el año %d' %\n      (nombre, apellido, asignatura, anio)) \"\"\"\nprint(\n    f'Este repositorio ha sido realizado por {nombre} {apellido} para la asignatura de {asignatura} en el año {anio}')\nprint(f'La longitura de {nombre} es {len(nombre)}')",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "asignatura",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "asignatura = 'SGE'\nanio = 2023\nprint('Este repositorio ha sido realizado por {} {} para la asignautara de {} en el año {}'.format(\n    nombre, apellido, asignatura, anio))\n\"\"\" print('Este repositorio ha sido realizado por %s %s para la asignautar de %s en el año %d' %\n      (nombre, apellido, asignatura, anio)) \"\"\"\nprint(\n    f'Este repositorio ha sido realizado por {nombre} {apellido} para la asignatura de {asignatura} en el año {anio}')\nprint(f'La longitura de {nombre} es {len(nombre)}')\nletra = nombre[0]  # B",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "anio",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "anio = 2023\nprint('Este repositorio ha sido realizado por {} {} para la asignautara de {} en el año {}'.format(\n    nombre, apellido, asignatura, anio))\n\"\"\" print('Este repositorio ha sido realizado por %s %s para la asignautar de %s en el año %d' %\n      (nombre, apellido, asignatura, anio)) \"\"\"\nprint(\n    f'Este repositorio ha sido realizado por {nombre} {apellido} para la asignatura de {asignatura} en el año {anio}')\nprint(f'La longitura de {nombre} es {len(nombre)}')\nletra = nombre[0]  # B\nletra = nombre[len(nombre)-1]  # a",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "letra",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "letra = nombre[0]  # B\nletra = nombre[len(nombre)-1]  # a\nprint(letra)\ncorreo = 'developandsystem@gmail.com'\ndominio = correo[correo.index('@'):len(correo)]\nprint(dominio)\npalabraInicial = 'esto es un ejemplo'\nprint(palabraMultiple.capitalize())  # 'Esto es un Ejemplo'\nfrase = 'esta frase está echa para poder buscar todos los elementos de la misma'\nprint(frase.count('a'))",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "letra",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "letra = nombre[len(nombre)-1]  # a\nprint(letra)\ncorreo = 'developandsystem@gmail.com'\ndominio = correo[correo.index('@'):len(correo)]\nprint(dominio)\npalabraInicial = 'esto es un ejemplo'\nprint(palabraMultiple.capitalize())  # 'Esto es un Ejemplo'\nfrase = 'esta frase está echa para poder buscar todos los elementos de la misma'\nprint(frase.count('a'))\nprint(frase.count('es'))",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "correo",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "correo = 'developandsystem@gmail.com'\ndominio = correo[correo.index('@'):len(correo)]\nprint(dominio)\npalabraInicial = 'esto es un ejemplo'\nprint(palabraMultiple.capitalize())  # 'Esto es un Ejemplo'\nfrase = 'esta frase está echa para poder buscar todos los elementos de la misma'\nprint(frase.count('a'))\nprint(frase.count('es'))\nprint(frase.endswith(\"mos\"))  # false\nprint(frase.endswith(\"isma\"))  # true",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "dominio",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "dominio = correo[correo.index('@'):len(correo)]\nprint(dominio)\npalabraInicial = 'esto es un ejemplo'\nprint(palabraMultiple.capitalize())  # 'Esto es un Ejemplo'\nfrase = 'esta frase está echa para poder buscar todos los elementos de la misma'\nprint(frase.count('a'))\nprint(frase.count('es'))\nprint(frase.endswith(\"mos\"))  # false\nprint(frase.endswith(\"isma\"))  # true\nprint(frase.find(\"f\"))  # 5",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "palabraInicial",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "palabraInicial = 'esto es un ejemplo'\nprint(palabraMultiple.capitalize())  # 'Esto es un Ejemplo'\nfrase = 'esta frase está echa para poder buscar todos los elementos de la misma'\nprint(frase.count('a'))\nprint(frase.count('es'))\nprint(frase.endswith(\"mos\"))  # false\nprint(frase.endswith(\"isma\"))  # true\nprint(frase.find(\"f\"))  # 5",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "frase",
+        "kind": 5,
+        "importPath": "Tema4.02_strings",
+        "description": "Tema4.02_strings",
+        "peekOfCode": "frase = 'esta frase está echa para poder buscar todos los elementos de la misma'\nprint(frase.count('a'))\nprint(frase.count('es'))\nprint(frase.endswith(\"mos\"))  # false\nprint(frase.endswith(\"isma\"))  # true\nprint(frase.find(\"f\"))  # 5",
+        "detail": "Tema4.02_strings",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "numeros = [1, 2, 3, 4, 5, 6, 7]\nnumeros.insert(1, 10)\nprint(numeros)\nnumeros[0:3] = [9, 8, 7]\nnumeros[0] = -1\nsubconjunto = numeros[2:4]\nprint(subconjunto)\nprint(numeros[-1])  # 7\nprint(numeros[-len(numeros)])  # 1\nprint(numeros[0])  # 1",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "numeros[0:3]",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "numeros[0:3] = [9, 8, 7]\nnumeros[0] = -1\nsubconjunto = numeros[2:4]\nprint(subconjunto)\nprint(numeros[-1])  # 7\nprint(numeros[-len(numeros)])  # 1\nprint(numeros[0])  # 1\nprint(numeros[len(numeros)-1])  # 7\npalabras = list()\npalabras.extend([\"Ejemplo\", \"de\", \"como\", \"añadir\", \"elementos\"])",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "numeros[0]",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "numeros[0] = -1\nsubconjunto = numeros[2:4]\nprint(subconjunto)\nprint(numeros[-1])  # 7\nprint(numeros[-len(numeros)])  # 1\nprint(numeros[0])  # 1\nprint(numeros[len(numeros)-1])  # 7\npalabras = list()\npalabras.extend([\"Ejemplo\", \"de\", \"como\", \"añadir\", \"elementos\"])\nprint(palabras)",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "subconjunto",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "subconjunto = numeros[2:4]\nprint(subconjunto)\nprint(numeros[-1])  # 7\nprint(numeros[-len(numeros)])  # 1\nprint(numeros[0])  # 1\nprint(numeros[len(numeros)-1])  # 7\npalabras = list()\npalabras.extend([\"Ejemplo\", \"de\", \"como\", \"añadir\", \"elementos\"])\nprint(palabras)\nlista1 = [\"primero\", \"segundo\", \"tercero\"]",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "palabras",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "palabras = list()\npalabras.extend([\"Ejemplo\", \"de\", \"como\", \"añadir\", \"elementos\"])\nprint(palabras)\nlista1 = [\"primero\", \"segundo\", \"tercero\"]\nlistaResultante = lista1 * 2\nprint(listaResultante)\nlista2 = [\"cuarto\", \"quinto\", \"sexto\"]\nlistaResultante = lista1 + lista2\nprint(listaResultante)\nlistaElementos = [\"Elemento 4\", \"Elemento 2\",",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "lista1",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "lista1 = [\"primero\", \"segundo\", \"tercero\"]\nlistaResultante = lista1 * 2\nprint(listaResultante)\nlista2 = [\"cuarto\", \"quinto\", \"sexto\"]\nlistaResultante = lista1 + lista2\nprint(listaResultante)\nlistaElementos = [\"Elemento 4\", \"Elemento 2\",\n                  \"Elemento 1\", \"Elemento 3\"]\nlistaElementos.sort()\nprint(listaElementos)",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "listaResultante",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "listaResultante = lista1 * 2\nprint(listaResultante)\nlista2 = [\"cuarto\", \"quinto\", \"sexto\"]\nlistaResultante = lista1 + lista2\nprint(listaResultante)\nlistaElementos = [\"Elemento 4\", \"Elemento 2\",\n                  \"Elemento 1\", \"Elemento 3\"]\nlistaElementos.sort()\nprint(listaElementos)\nif 'Elemento 1' in listaElementos:",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "lista2",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "lista2 = [\"cuarto\", \"quinto\", \"sexto\"]\nlistaResultante = lista1 + lista2\nprint(listaResultante)\nlistaElementos = [\"Elemento 4\", \"Elemento 2\",\n                  \"Elemento 1\", \"Elemento 3\"]\nlistaElementos.sort()\nprint(listaElementos)\nif 'Elemento 1' in listaElementos:\n    print('El elemento está en la lista')\nfor item in listaElementos:",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "listaResultante",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "listaResultante = lista1 + lista2\nprint(listaResultante)\nlistaElementos = [\"Elemento 4\", \"Elemento 2\",\n                  \"Elemento 1\", \"Elemento 3\"]\nlistaElementos.sort()\nprint(listaElementos)\nif 'Elemento 1' in listaElementos:\n    print('El elemento está en la lista')\nfor item in listaElementos:\n    print(item)",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "listaElementos",
+        "kind": 5,
+        "importPath": "Tema4.03_list",
+        "description": "Tema4.03_list",
+        "peekOfCode": "listaElementos = [\"Elemento 4\", \"Elemento 2\",\n                  \"Elemento 1\", \"Elemento 3\"]\nlistaElementos.sort()\nprint(listaElementos)\nif 'Elemento 1' in listaElementos:\n    print('El elemento está en la lista')\nfor item in listaElementos:\n    print(item)\nprint(f'Elemento {listaElementos.pop(0)} eliminado con éxito')\n# listaElementos.remove('Elemento 1')",
+        "detail": "Tema4.03_list",
+        "documentation": {}
+    },
+    {
+        "label": "funcionImprimir",
+        "kind": 2,
+        "importPath": "Tema4.04_funciones",
+        "description": "Tema4.04_funciones",
+        "peekOfCode": "def funcionImprimir(mensaje):\n    print(f'el {mensaje} se ha impreso correctamente')\ndef suma(op1, op2):\n    resultado = op1+op2\n    print('Suma realizada con éxito')\n    return resultado\nresultado = suma(4, 4)\nprint(resultado)  # 13\ndef multiplicacion(op1, op2=1):\n    resultado = op1*op2",
+        "detail": "Tema4.04_funciones",
+        "documentation": {}
+    },
+    {
+        "label": "suma",
+        "kind": 2,
+        "importPath": "Tema4.04_funciones",
+        "description": "Tema4.04_funciones",
+        "peekOfCode": "def suma(op1, op2):\n    resultado = op1+op2\n    print('Suma realizada con éxito')\n    return resultado\nresultado = suma(4, 4)\nprint(resultado)  # 13\ndef multiplicacion(op1, op2=1):\n    resultado = op1*op2\n    print(f'La multiplicación de {op1} y {op2} es {resultado}')\nmultiplicacion(9, 2)  # 18",
+        "detail": "Tema4.04_funciones",
+        "documentation": {}
+    },
+    {
+        "label": "multiplicacion",
+        "kind": 2,
+        "importPath": "Tema4.04_funciones",
+        "description": "Tema4.04_funciones",
+        "peekOfCode": "def multiplicacion(op1, op2=1):\n    resultado = op1*op2\n    print(f'La multiplicación de {op1} y {op2} es {resultado}')\nmultiplicacion(9, 2)  # 18\nmultiplicacion(9)  # 9\ndef sumarTodos(*elementos):\n    sumatorio = 0\n    for item in elementos:\n        sumatorio += item\n    print(",
+        "detail": "Tema4.04_funciones",
+        "documentation": {}
+    },
+    {
+        "label": "sumarTodos",
+        "kind": 2,
+        "importPath": "Tema4.04_funciones",
+        "description": "Tema4.04_funciones",
+        "peekOfCode": "def sumarTodos(*elementos):\n    sumatorio = 0\n    for item in elementos:\n        sumatorio += item\n    print(\n        f'El resultado de sumar todos los elementos pasados es de {sumatorio}')\nsumarTodos(1, 4, 5, 6, 7, 3, 1, 0)",
+        "detail": "Tema4.04_funciones",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "Tema4.04_funciones",
+        "description": "Tema4.04_funciones",
+        "peekOfCode": "resultado = suma(4, 4)\nprint(resultado)  # 13\ndef multiplicacion(op1, op2=1):\n    resultado = op1*op2\n    print(f'La multiplicación de {op1} y {op2} es {resultado}')\nmultiplicacion(9, 2)  # 18\nmultiplicacion(9)  # 9\ndef sumarTodos(*elementos):\n    sumatorio = 0\n    for item in elementos:",
+        "detail": "Tema4.04_funciones",
+        "documentation": {}
+    },
+    {
+        "label": "lista",
+        "kind": 5,
+        "importPath": "Tema4.05_uso",
+        "description": "Tema4.05_uso",
+        "peekOfCode": "lista = modfunciones.obtenerSubconjuntoList([1, 2, 3, 4, 5, 6, 7], 2, 4)\nprint(lista)\nlista = modfunciones.sumarElementosList([], 1, 2, 3)\nprint(lista)",
+        "detail": "Tema4.05_uso",
+        "documentation": {}
+    },
+    {
+        "label": "lista",
+        "kind": 5,
+        "importPath": "Tema4.05_uso",
+        "description": "Tema4.05_uso",
+        "peekOfCode": "lista = modfunciones.sumarElementosList([], 1, 2, 3)\nprint(lista)",
+        "detail": "Tema4.05_uso",
+        "documentation": {}
+    },
+    {
+        "label": "Producto",
+        "kind": 6,
+        "importPath": "Tema4.06_clases",
+        "description": "Tema4.06_clases",
+        "peekOfCode": "class Producto:\n    def __init__(self, nombre, descripcion, precio):\n        self.nombre = nombre\n        self.descripcion = descripcion\n        self.precio = precio\nproducto = Producto(\"Ordenador\", \"Ordenador personal para trabajar\", 1000)\nprint(producto.nombre)\nprint(producto.descripcion)\nprint(producto.precio)",
+        "detail": "Tema4.06_clases",
+        "documentation": {}
+    },
+    {
+        "label": "producto",
+        "kind": 5,
+        "importPath": "Tema4.06_clases",
+        "description": "Tema4.06_clases",
+        "peekOfCode": "producto = Producto(\"Ordenador\", \"Ordenador personal para trabajar\", 1000)\nprint(producto.nombre)\nprint(producto.descripcion)\nprint(producto.precio)",
+        "detail": "Tema4.06_clases",
+        "documentation": {}
+    },
+    {
+        "label": "funcionImprimir",
+        "kind": 2,
+        "importPath": "Tema4.modfunciones",
+        "description": "Tema4.modfunciones",
+        "peekOfCode": "def funcionImprimir(mensaje):\n    print(\n        f'El mensaje que se ha mandado a imprimir es el siguiente: {mensaje}')\ndef sumarElementosList(lista, *elementos):\n    lista.extend(elementos)\n    return lista\ndef obtenerSubconjuntoList(lista, pos1, pos2):\n    listaResultado = lista[pos1:pos2]\n    print('La operacion se ha llevado a cabo con éxito')\n    print(f'Se ha obtenido una lista de {len(listaResultado)} elementos')",
+        "detail": "Tema4.modfunciones",
+        "documentation": {}
+    },
+    {
+        "label": "sumarElementosList",
+        "kind": 2,
+        "importPath": "Tema4.modfunciones",
+        "description": "Tema4.modfunciones",
+        "peekOfCode": "def sumarElementosList(lista, *elementos):\n    lista.extend(elementos)\n    return lista\ndef obtenerSubconjuntoList(lista, pos1, pos2):\n    listaResultado = lista[pos1:pos2]\n    print('La operacion se ha llevado a cabo con éxito')\n    print(f'Se ha obtenido una lista de {len(listaResultado)} elementos')\n    return listaResultado",
+        "detail": "Tema4.modfunciones",
+        "documentation": {}
+    },
+    {
+        "label": "obtenerSubconjuntoList",
+        "kind": 2,
+        "importPath": "Tema4.modfunciones",
+        "description": "Tema4.modfunciones",
+        "peekOfCode": "def obtenerSubconjuntoList(lista, pos1, pos2):\n    listaResultado = lista[pos1:pos2]\n    print('La operacion se ha llevado a cabo con éxito')\n    print(f'Se ha obtenido una lista de {len(listaResultado)} elementos')\n    return listaResultado",
+        "detail": "Tema4.modfunciones",
+        "documentation": {}
+    }
+]
