@@ -440,7 +440,7 @@ from modulo import funcion_general as fun1, funcion_especifica as fun2
 
 # Clases
 
-Para poder definir una clase se utiliza la palabra reservada class. En el caso de querer tener un constructor, es necesario utilizar la funcion __init__, la cual actual como constructor. Dentro de ella, existirán tantos parámetros como se consideren necesarios, siendo uno de ellos el parámetro self, el cual ayudará a igualar los elementos a variables de clase
+Para poder definir una clase se utiliza la palabra reservada class. En el caso de querer tener un constructor, es necesario utilizar la funcion __init__, la cual actual como constructor por defecto o parametrizado. Dentro de ella, existirán tantos parámetros como se consideren necesarios, siendo uno de ellos el parámetro self, el cual ayudará a igualar los elementos a variables de clase
 
 ```py
 class Producto:
@@ -458,3 +458,74 @@ print(producto.descripcion)
 print(producto.precio)
 
 ```
+
+Como se puede ver en el ejemplo, esta clase tiene un parámetro por defecto que es el self, el cual hace referencia a una instancia de la propia clase. Este tipo de parámetros se utiliza en todos aquellos métodos que se quieran definir, pudiendo así acceder a cualquier parte del objeto
+
+```py
+class Producto:
+    def __init__(self, nombre, descripcion, precio):
+
+        self.nombre = nombre
+        self.descripcion = descripcion
+        self.precio = precio
+
+    def mostrarDatos(self):
+        print(f'El nombre del producto es {self.nombre}')
+        print(f"f La descripción del producto es {self.descripcion}")
+        print(f"f El precio del producto es {self.precio}")
+
+
+producto = Producto("Ordenador", "Ordenador personal para trabajar", 1000)
+
+producto.mostrarDatos()
+```
+
+Del mismo modo que se pueden definir un constructor parametrizado que reciba tantos elementos como sean necesarios, también es posible indicar que algunos tengan valores por defecto. PAra ello basta con indicar el valor que se le quiere dar, el cual será utilizado en el caso de que no se pase nada
+
+```py
+class Informe:
+    def __init__(self, titulo = "prueba", categoria, elementos):
+        self.titulo = titulo
+        self.categoria = categoria
+        self.elementos = elementos
+
+    def imprimirInforme(self):
+        print(f'{self.titulo}')
+        print(f'{self.categoria}')
+        for item in self.elementos:
+            print(f'{item}')
+
+
+informe = Informe("Informe prueba", elementos =[1, 2, 3, 4, 5])
+informe.imprimirInforme()
+```
+
+## Herencia
+
+Una de las grandes características de los lenguajes de programación es la herencia y la posibilidad de tener una clase plantilla que le de funcionalidades a las clases que están por debajo de ella. Para este ejemplo vamos a suponer que tenemos una clase Informe que tiene las características utilizadas en la clase anterior. Adicionalmente, queremos tener informes de tipo Venta y de tipo Informativo, los cuales agregan las características de total, ivaAplicado, fechaCobro por un lado y de unidadesSolicitadas, direccionEnvio por otro. La clase general quedaría de la siguiente forma:
+
+```py
+class Informe:
+    def __init__(self, titulo, categoria, elementos):
+        self.titulo = titulo
+        self.categoria = categoria
+        self.elementos = elementos
+
+    def imprimirInforme(self):
+        print(f'{self.titulo}')
+        print(f'{self.categoria}')
+        for item in self.elementos:
+            print(f'{item}')
+```
+
+Para poder heredar, lo único que es necesario es indicar cual en la definición de la clase la herencia
+
+```py
+class InformeVentas(Informe):
+```
+
+Automáticamente todos los elementos de la clase Informe pasan a la clase ventas. 
+
+### Constructores
+
+Cuando se hereda, la primera cosa que se debe hacer es la de sobrescribir el constructor y todos aquellos elementos que se quieran modificar. Para ello es necesario utilizar

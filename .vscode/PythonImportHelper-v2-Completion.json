@@ -346,16 +346,34 @@
         "kind": 6,
         "importPath": "Tema4.06_clases",
         "description": "Tema4.06_clases",
-        "peekOfCode": "class Producto:\n    def __init__(self, nombre, descripcion, precio):\n        self.nombre = nombre\n        self.descripcion = descripcion\n        self.precio = precio\nproducto = Producto(\"Ordenador\", \"Ordenador personal para trabajar\", 1000)\nprint(producto.nombre)\nprint(producto.descripcion)\nprint(producto.precio)",
+        "peekOfCode": "class Producto:\n    def __init__(self, nombre, descripcion, precio):\n        self.nombre = nombre\n        self.descripcion = descripcion\n        self.precio = precio\n    def mostrarDatos(self):\n        print(f'El nombre del producto es {self.nombre}')\n        print(f\"f La descripción del producto es {self.descripcion}\")\n        print(f\"f El precio del producto es {self.precio}\")\n# producto = Producto(\"Ordenador\", \"Ordenador personal para trabajar\", 1000)",
         "detail": "Tema4.06_clases",
         "documentation": {}
     },
     {
-        "label": "producto",
+        "label": "Informe",
+        "kind": 6,
+        "importPath": "Tema4.06_clases",
+        "description": "Tema4.06_clases",
+        "peekOfCode": "class Informe:\n    def __init__(self, titulo, categoria, elementos):\n        self.titulo = titulo\n        self.categoria = categoria\n        self.elementos = elementos\n    def imprimirInforme(self):\n        print(f'{self.titulo}')\n        print(f'{self.categoria}')\n        for item in self.elementos:\n            print(f'{item}')",
+        "detail": "Tema4.06_clases",
+        "documentation": {}
+    },
+    {
+        "label": "InformeVentas",
+        "kind": 6,
+        "importPath": "Tema4.06_clases",
+        "description": "Tema4.06_clases",
+        "peekOfCode": "class InformeVentas(Informe):\ninforme = Informe(\"Informe prueba\", categoria='Ventas',\n                  elementos=[1, 2, 3, 4, 5])\ninforme.imprimirInforme()",
+        "detail": "Tema4.06_clases",
+        "documentation": {}
+    },
+    {
+        "label": "informe",
         "kind": 5,
         "importPath": "Tema4.06_clases",
         "description": "Tema4.06_clases",
-        "peekOfCode": "producto = Producto(\"Ordenador\", \"Ordenador personal para trabajar\", 1000)\nprint(producto.nombre)\nprint(producto.descripcion)\nprint(producto.precio)",
+        "peekOfCode": "informe = Informe(\"Informe prueba\", categoria='Ventas',\n                  elementos=[1, 2, 3, 4, 5])\ninforme.imprimirInforme()",
         "detail": "Tema4.06_clases",
         "documentation": {}
     },
