@@ -1,3 +1,5 @@
+elementos = [1, "cosa", False]
+
 numeros = [1, 2, 3, 4, 5, 6, 7]
 numeros.insert(1, 10)
 print(numeros)

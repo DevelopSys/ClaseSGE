@@ -1,3 +1,35 @@
+- [Comentarios](#comentarios)
+- [Definición de variable](#definición-de-variable)
+  - [Tipos de variable](#tipos-de-variable)
+  - [Tratamiento de strings](#tratamiento-de-strings)
+    - [Formateo](#formateo)
+    - [Métodos string](#métodos-string)
+  - [Operadores](#operadores)
+- [Colecciones](#colecciones)
+  - [Listas](#listas)
+    - [Acceso a elementos](#acceso-a-elementos)
+    - [Modificar elementos a una lista](#modificar-elementos-a-una-lista)
+    - [Añadir elementos de una lista](#añadir-elementos-de-una-lista)
+    - [Borrar elementos de una lista](#borrar-elementos-de-una-lista)
+    - [Otras accione elementos en una lista (recorrer, buscar, ordenar)](#otras-accione-elementos-en-una-lista-recorrer-buscar-ordenar)
+  - [Tuplas](#tuplas)
+    - [Operaciones](#operaciones)
+  - [Set o conjuntos](#set-o-conjuntos)
+    - [Acceder a las posiciones de un set](#acceder-a-las-posiciones-de-un-set)
+    - [Añadir elementos a un conjunto](#añadir-elementos-a-un-conjunto)
+    - [Eliminar elementos de un array](#eliminar-elementos-de-un-array)
+    - [Teoria de conjuntos](#teoria-de-conjuntos)
+      - [Unión](#unión)
+      - [Diferencia](#diferencia)
+      - [Diferencia simétrica](#diferencia-simétrica)
+- [Funciones](#funciones)
+- [Módulos](#módulos)
+- [Clases](#clases)
+  - [Herencia](#herencia)
+    - [Constructores](#constructores)
+
+
+
 # Comentarios
 
 Comentario de una se utiliza el carácter #
@@ -333,6 +365,148 @@ listaElementos = ["Elemento 4", "Elemento 2",
 listaElementos.sort()
 print(listaElementos) # ['Elemento 1', 'Elemento 2', 'Elemento 3', 'Elemento 4']
 ```
+
+## Tuplas
+
+Las tuplas son colecciones de datos muy similares a las lista, con la diferencia que se trata de elementos no mutables por lo que no se puede cambiar su contenido. Para pode inicializar una tupla se utiiza la siguiente sentencia:
+
+```py
+lista = tuple()
+listaCosas = (1,2,3,4,5,6)
+```
+
+A la hora de trabajar con los elementos, se realiza exactamente de la misma forma que con las listas, trabajando por posiciones
+
+### Operaciones
+
+Alguna de las acciones que pueden ser interesantes a la hora de trabajar con las tuplas son las siguientes: 
+
+- Comprobar si un elemento está en la tupla: se utiliza la sentencia in
+
+```py
+categorias = ("financias", "it", "ventas", "marketing")
+print('it' in categorias) # true
+```
+
+- Eliminar tuplas: Si bien no se puede eliminar elementos de una tupla al tratarse de elementos no mutables, si se puede eliminar una tupla completa para así poder liberar memoria. Para ello se utiliza la función del
+
+```py
+categorias = ("financias", "it", "ventas", "marketing")
+del categorias
+```
+- Buscar el número de elementos que hay en una lista: Para poder encontrar el número de elementos que hay en una lista se puede utiliza el método count.
+
+```py
+listaCosas = (1, 2, 3, 4, 5, 6, 1, 2, 1, 1, 4)
+print(listaCosas.count(1)) # 4
+```
+
+- Buscar el indice de un elemento concreto: utilizando el método index se obtiene cual es la posición de un elemento indicado
+
+```py
+listaCosas = (1, 2, 3, 4, 5, 6, 1, 2, 1, 1, 4)
+print(listaCosas.index(2)) # 2
+```
+
+## Set o conjuntos
+
+Los sets son estructuras de datos similares a las listas con las siguientes diferencias:
+
+- Cada uno de los elementos del set es único, no puede haber elementos duplicados
+- Los elementos son inmutables
+
+Para poder crear un set te utiliza el método set(), indicando cuales son cada uno de los elementos de la colección o directamente cada uno de los elementos entre {}
+
+```py
+elementos = set(["elemento 1", "elemento 2", "elemento 3"])
+elementos = {"elemento 1", "elemento 2", "elemento 3"}
+```
+
+### Acceder a las posiciones de un set
+
+Para poder acceder a los elementos del set, no se puede acceder por posiciones, teniéndose que hacerse mediante un bucle
+
+```py
+elementos = {"elemento 1", "elemento 2", "elemento 3"}
+for i in elementos:
+    print(i)
+```
+
+### Añadir elementos a un conjunto
+
+Para poder agregar elementos a un conjunto se utiliza el método add
+
+```py
+elementos = {"elemento 1", "elemento 2", "elemento 3"}
+elementos.add("elemento adicional")
+```
+### Eliminar elementos de un array
+
+Para poder eliminar elementos dentro de un conjunto se utiliza el método remove
+
+```py
+elementos = {"elemento 1", "elemento 2", "elemento 3"}
+elementos.add("elemento adicional")
+elementos.remove("elemento 1")
+```
+
+### Teoria de conjuntos
+
+![conjuntos](./images/conjuntos.png)
+
+Adicionalmente a todas las acciones que se pueden realizar sobre los conjuntos, existen las operaciones de to¡eoria de conjuntos, pudiendo obtener un conjunto determinado de elementos dependiendo del método aplicado.
+
+#### Intersección
+
+Se obtienen los elementos que están al mismo tiempo en el conjunto 1 y conjunto 2
+
+```py
+conjunto1 = {1, 2, 3, 4, 5, 6, 7, 8}
+conjunto2 = {4, 5, 9, 10, 11, 12}
+
+conjuntoResultante = conjunto1.intersection(conjunto2)
+print(conjuntoResultante) ## {4,5}
+```
+#### Unión
+
+Se obtienen todos los elementos, tanto aquellos que están en el conjunto1 como en el conjunto2
+
+```py
+conjunto1 = {1, 2, 3, 4, 5, 6, 7, 8}
+conjunto2 = {4, 5, 9, 10, 11, 12}
+
+conjuntoResultante = conjunto1.union(conjunto2)
+print(conjuntoResultante) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+```
+
+#### Diferencia
+
+Se obtienen todos los elementos del conjunto uno excepto aquellos que están presentes en el segundo indicado
+
+```py
+conjunto1 = {1, 2, 3, 4, 5, 6, 7, 8}
+conjunto2 = {4, 5, 9, 10, 11, 12}
+
+conjuntoResultante = conjunto1.difference(conjunto2)
+print(conjuntoResultante) # {1, 2, 3, 6, 7, 8}
+```
+#### Diferencia simétrica
+
+Se obtienen todos los elementos de ambos conjuntos expcepto aquellos que sean coincidentes
+
+```py
+conjunto1 = {1, 2, 3, 4, 5, 6, 7, 8}
+conjunto2 = {4, 5, 9, 10, 11, 12}
+
+conjuntoResultante = conjunto1.symmetric_difference(conjunto2)
+print(conjuntoResultante) # {1, 2, 3, 6, 7, 8, 9, 10, 11, 12}
+```
+
+## Diccionarios
+
+Los diccionarios es una colección mutable de elementos organizados con un par clave - valor. Para poder crear un diccionario se utiliza o bien las {} o bien la función dic
+
+
 
 # Funciones
 
