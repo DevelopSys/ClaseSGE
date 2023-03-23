@@ -1,5 +1,22 @@
-def funcionImprimir(mensaje):
+def generarInforme(contenido, titulo, elementos):
+    print(titulo)
+    for i in contenido:
+        print(i)
+    print(f'los elementos pasados para el informe son {elementos}')
+
+
+generarInforme(["Esto es un ejemplo de contenido", "para mostrar en un informe"],
+               "Informe posicional", [1, 2, 3, 4])
+
+generarInforme(elementos=["Esto es un ejemplo de contenido", "para mostrar en un informe"],
+               titulo="Informe posicional", contenido=[1, 2, 3, 4])
+
+
+def funcionImprimir(mensaje: str):
     print(f'el {mensaje} se ha impreso correctamente')
+
+
+
 
 
 def suma(op1, op2):

@@ -17,22 +17,22 @@ class Producto:
 
 
 class Informe:
-    def __init__(self, titulo, categoria, elementos):
+    def __init__(self, titulo, categoria, elementos, nombre):
         self.titulo = titulo
         self.categoria = categoria
         self.elementos = elementos
+        self.__nombre = nombre
 
     def imprimirInforme(self):
+        print(f'{self.__nombre}')
         print(f'{self.titulo}')
         print(f'{self.categoria}')
         for item in self.elementos:
             print(f'{item}')
 
 
-class InformeVentas(Informe):
+informe = Informe("Titulo", "Categoria", [
+                  "elemento1", "elemento2", "elemento3"], "nombre")
 
-
-informe = Informe("Informe prueba", categoria='Ventas',
-                  elementos=[1, 2, 3, 4, 5])
-
+print(informe.__nombre)
 informe.imprimirInforme()

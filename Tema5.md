@@ -5,6 +5,9 @@
     - [Formateo](#formateo)
     - [Métodos string](#métodos-string)
   - [Operadores](#operadores)
+- [Sentencias de control / bucles](#sentencias-de-control--bucles)
+  - [If](#if)
+  - [match](#match)
 - [Colecciones](#colecciones)
   - [Listas](#listas)
     - [Acceso a elementos](#acceso-a-elementos)
@@ -22,11 +25,16 @@
       - [Unión](#unión)
       - [Diferencia](#diferencia)
       - [Diferencia simétrica](#diferencia-simétrica)
+  - [Diccionarios](#diccionarios)
+    - [Acceder a elementos de un diccionario](#acceder-a-elementos-de-un-diccionario)
+    - [Añadir un elemento al diccionario](#añadir-un-elemento-al-diccionario)
+    - [Eliminar elementos del diccionario](#eliminar-elementos-del-diccionario)
+    - [Acciones masivas](#acciones-masivas)
 - [Funciones](#funciones)
 - [Módulos](#módulos)
 - [Clases](#clases)
   - [Herencia](#herencia)
-    - [Constructores](#constructores)
+- [Módulos](#módulos-1)
 
 
 
@@ -200,6 +208,38 @@ Los operadores en python son
 - Aritméticos: Aquellos que permiten realizar operaciones de suma (+), resta (-), multiplicación (*), división(/), modulo (%) y exponente (**)
 - Comparación Aquellos que permiten realizar comprobaciones sobre algun tipo de condición. La salida de estos operadores siempre será un operador booleano. Se pueden destacar las siguientes: igual (==), diferente (!=), mayor (>), mayor igual (>=), menor (<), menor igual (<=)
 - Lógicos: Aquellos que permiten juntar el resultado de más de una condición de comparación. Entre estos operadores podemos destacar sobre todo tres: y (and), ó (or)
+
+# Sentencias de control / bucles
+
+## If
+
+```py
+numero = 7
+if numero == 0:
+    print("numero es 0")
+elif numero < 5:
+    print("numero entre 1 y 4")
+elif numero < 9:
+    print("numero entre 5 y 8")
+else:
+    print("numero 9 o 10")
+```
+
+## match
+
+```py
+numero = 7
+match numero:
+    case 1:
+        print("valor 1")
+    case 2:
+        print("valor 2")
+    case 3:
+        print("valor 3")
+    case _:
+        print("valor no contemplado")
+
+```
 
 # Colecciones
 
@@ -504,9 +544,88 @@ print(conjuntoResultante) # {1, 2, 3, 6, 7, 8, 9, 10, 11, 12}
 
 ## Diccionarios
 
-Los diccionarios es una colección mutable de elementos organizados con un par clave - valor. Para poder crear un diccionario se utiliza o bien las {} o bien la función dic
+Los diccionarios es una colección mutable de elementos organizados con un par clave - valor. Para poder crear un diccionario se utiliza o bien las {} o bien la función dict o directamente la definición del mismo
 
+```py
 
+informe = {'nombre': "informe ventas", 'prioridad': 'alta',
+           'elementos': ['cabecera', 'contenido', 'totales']}
+lista = ["ventas", "finanzas", "marketing", ""]
+listaDict = dict(["a1", "b2", "c3", "d4"])
+
+print(type(informe))
+print(type(lista))
+print(type(listaDict))
+
+print(informe) #{'nombre': 'informe ventas', 'prioridad': 'alta', 'elementos': ['cabecera', 'contenido', 'totales']}
+print(lista) #['ventas', 'finanzas', 'marketing', '']
+print(listaDict) #{'a': '1', 'b': '2', 'c': '3', 'd': '4'}
+```
+
+### Acceder a elementos de un diccionario
+
+Para poder acceder a elementos de un diccionario tan solo es necesario indicar la clave a la que se quiere acceder, obteniendo el valor asociado:
+
+```py
+informe = {'nombre': "informe ventas", 'prioridad': 'alta',
+           'elementos': ['cabecera', 'contenido', 'totales']}
+
+print(informe["nombre"]) # informe ventas
+```
+
+ADicionalmente también se puede acceder a los elementos utilizando el método get
+
+```py
+informe = {'nombre': "informe ventas", 'prioridad': 'alta',
+           'elementos': ['cabecera', 'contenido', 'totales']}
+
+informe.get("nombre") # informe ventas
+```
+
+La funcionalidad es exactamente igual, la única diferencia con respecto al acceso por clave es que en el caso de no encontrar la clave no se obtiene una excepción
+
+### Añadir un elemento al diccionario
+
+Para poder añadir un elemento al diccionario, basta con indicar la nueva key y asignarle el valor deseado
+
+```py
+informe["cliente"] = "Universidad Europea"
+```
+
+Al igual que se puede añadir, también se puede modificar el valor de una clave ya existente
+
+### Eliminar elementos del diccionario
+
+Para pode eliminar elementos del diccionario se puede hacer de diferentes formas:
+
+- Mediante la función del:
+
+```py
+informe = {'nombre': "informe ventas", 'prioridad': 'alta',
+           'elementos': ['cabecera', 'contenido', 'totales']}
+del (informe["prioridad"])
+```
+
+- Mediante la función pop
+
+```py
+print(f'eliminado el elemento {informe.pop("elementos")}')
+```
+  
+A diferencia del método anterior, el método pop ademas de borrar el elemento correspondiente también lo devuelve para poder utilizarlo
+
+### Acciones masivas
+
+En el caso de querer acceder a todos los elementos o claves de un diccionario, se puede utilizar el método key() o el método values(). Ambos métodos permiten la obtención de una lista de elementos (claves o valores según el método) e iterar sobre ellos mediante un bucle
+
+```py
+for i in informe.keys():
+    print(i)
+
+for i in informe.values():
+    print(i)
+
+```
 
 # Funciones
 
@@ -561,6 +680,29 @@ def sumarTodos(*elementos):
 sumarTodos(1, 4, 5, 6, 7, 3, 1, 0)
 ```
 
+Cuando se pasan parámetros en python se pueden realizar mediante posiciones, o mediante nominales. Los posicionales son los normales, aquellos que van colocados en un orden determinado. Los nominales son aquellos que van asignados a un parámetro concreto
+
+```py
+def generarInforme(contenido, titulo, elementos):
+    print(titulo)
+    for i in contenido:
+        print(i)
+    print(f'los elementos pasados para el informe son {elementos}')
+
+
+generarInforme(["Esto es un ejemplo de contenido", "para mostrar en un informe"],
+               "Informe posicional", [1, 2, 3, 4])
+
+```
+
+Además de poder darle est uso normal, también se pueden pasar parámetros indicando a cual es al que se asigna no teniendo que guardar la relación de posición 
+
+```py
+generarInforme(elementos=["Esto es un ejemplo de contenido", "para mostrar en un informe"],
+               titulo="Informe posicional", contenido=[1, 2, 3, 4])
+```
+
+Esto es mu útil cuando se utilizan parámetros con valores por defecto.
 # Módulos
 
 Los módulos, ayudan a que el código sea mucho más comprensible y escalable, ya que permite independizar en ficheros funciones y/o elementos para que sean reutilizados en diferentes sitos. Para poder crear un módulo basta con crear un archivo py, el cual puede contener variables, funciones, clases y/o ejecutables
@@ -673,7 +815,32 @@ class Informe:
 informe = Informe("Informe prueba", elementos =[1, 2, 3, 4, 5])
 informe.imprimirInforme()
 ```
+En el caso de querer declarar un atributo privado que se declare junto con doble gión bajo antes del nombre __
 
+```py
+class Informe:
+    def __init__(self, titulo, categoria, elementos, nombre):
+        self.titulo = titulo
+        self.categoria = categoria
+        self.elementos = elementos
+        self.__nombre = nombre
+
+    def imprimirInforme(self):
+        print(f'{self.__nombre}')
+        print(f'{self.titulo}')
+        print(f'{self.categoria}')
+        for item in self.elementos:
+            print(f'{item}')
+
+
+informe = Informe("Titulo", "Categoria", [
+                  "elemento1", "elemento2", "elemento3"], "nombre")
+
+print(informe.__nombre) ## error
+informe.imprimirInforme()
+```
+
+En caso de querer declarar un método como estático, se acompaña a la definición del método el decorador @staticmethod
 ## Herencia
 
 Una de las grandes características de los lenguajes de programación es la herencia y la posibilidad de tener una clase plantilla que le de funcionalidades a las clases que están por debajo de ella. Para este ejemplo vamos a suponer que tenemos una clase Informe que tiene las características utilizadas en la clase anterior. Adicionalmente, queremos tener informes de tipo Venta y de tipo Informativo, los cuales agregan las características de total, ivaAplicado, fechaCobro por un lado y de unidadesSolicitadas, direccionEnvio por otro. La clase general quedaría de la siguiente forma:
@@ -700,6 +867,5 @@ class InformeVentas(Informe):
 
 Automáticamente todos los elementos de la clase Informe pasan a la clase ventas. 
 
-### Constructores
+# Módulos
 
-Cuando se hereda, la primera cosa que se debe hacer es la de sobrescribir el constructor y todos aquellos elementos que se quieran modificar. Para ello es necesario utilizar
