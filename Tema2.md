@@ -118,7 +118,7 @@ Con el repositorio agregado al sistema (y un update - upggrade), se procede a de
 ```shell
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
 // tras descarga
-sudo gdede  bi -n wkhtmltox_0.12.5-1.bionic_amd64.deb
+sudo gdebi -n wkhtmltox_0.12.5-1.bionic_amd64.deb
 ```
 
 Por último, para que los binarios estén disponibles para cualquier usuario desde cualquier perfil, se realiza un enlace de los binarios
@@ -140,7 +140,7 @@ chown odoo:root /var/log/odoo
 ```shell
 cp /opt/odoo/odoo/debian/odoo.conf  /etc/odoo.conf
 chown odoo: /etc/odoo.conf
-chmod 640 /etc/odoo.conpip3
+chmod 640 /etc/odoo.conf
 ```
 
 10. Con el fichero de configuración creado, será necesario verificar su contenido, abriéndolo con el editor de texto que queramos
